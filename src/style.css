@@ -41,3 +41,72 @@ li {
   text-align: center;
   padding: 10px;
 }
+
+.movie-list {
+  display: grid;
+  grid-template-columns: 30% 30%;
+  grid-column-gap: 250px;
+  grid-row-gap: 10px;
+  margin-left: 100px;  
+}
+
+.singleMovie {
+  width: 10%;
+  height: auto;
+}
+
+.show-image {
+  width: 600px;
+  box-shadow: 1px 5px 10px 1px;
+}
+
+.name-like {
+  display: grid;
+  grid-template-columns: 300px auto auto;
+  grid-column-gap: 150px;
+  padding: 10px;
+  background-color: rgb(3, 42, 42);
+  width: 600px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+  padding: 20px;
+}
+
+.movie-name {
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.like-image {
+  color: white;
+}
+
+.num-like {
+  margin-left: -120px;
+  color: white;
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-gap: 10px;
+  margin-left: 10px;
+}
+
+.btn {
+  padding: 20px;
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px 1px rgb(5, 138, 23);
+  background: rgb(104, 93, 114);
+  color: white;
+  font-size: 20px;
+}
+
+.btn:hover {
+  background: blueviolet;
+  transform: scale(0.99);
+  border-start-end-radius: 80px;
+}
