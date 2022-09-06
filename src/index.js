@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import _ from 'lodash';
 
 import './style.css';
@@ -47,3 +48,6 @@ const showMovie = (imageUrl, name, id) => {
 displayMovieList();
 
 
+=======
+import _ from 'lodash';
+>>>>>>> 43edab6 (import lodash)
