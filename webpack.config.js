@@ -22,7 +22,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Development',
+      title: 'TVShow',
+      template: './src/index.html',
     }),
   ],
 };
