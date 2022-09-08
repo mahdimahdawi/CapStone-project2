@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import heartIcon from './images/heart-icon.svg';
 import './style.css';
 import getData from './module/getData.js';
@@ -6,7 +5,6 @@ import { newLike, getLike } from './module/likeApi.js';
 
 const availableMovies = document.querySelector('.movie-num');
 const movieList = document.querySelector('.movie-list');
-
 
 const DisplayLikes = async (item) => {
   const likesNumber = await getLike();
@@ -16,37 +14,6 @@ const DisplayLikes = async (item) => {
     }
   });
 };
-
-const displayMovieList = async () => {
-  try {
-    const data = await getData();
-    availableMovies.innerHTML = `Available Movies ${data.length}`;
-
-    data.forEach((item) => {
-      const {
-        id,
-        image: { original: imageUrl },
-        name,
-      } = item;
-      const movieItem = showMovie(imageUrl, name, id);
-      movieList.appendChild(movieItem);
-    });
-  } finally {
-    const likeIcon = document.querySelectorAll('.like-image');
-    likeIcon.forEach((item) => {
-      item.addEventListener('click', (e) => {
-        newLike(e.target.parentElement.parentElement.id);
-        let currentLike = e.target.parentElement.children[2];
-        let preLike = +currentLike.innerText;
-        currentLike.innerText = preLike + 1;
-      });
-    });
-    document.querySelectorAll('.singleMovie').forEach((e) => {
-      DisplayLikes(e);
-    });
-  };
-};
-
 const showMovie = (imageUrl, name, id) => {
   const item = document.createElement('li');
   item.classList.add('singleMovie');
@@ -66,10 +33,37 @@ const showMovie = (imageUrl, name, id) => {
   `;
   return item;
 };
+const displayMovieList = async () => {
+  try {
+    const data = await getData();
+    availableMovies.innerHTML = `Available Movies ${data.length}`;
+
+    data.forEach((item) => {
+      const {
+        id,
+        image: { original: imageUrl },
+        name,
+      } = item;
+      const movieItem = showMovie(imageUrl, name, id);
+      movieList.appendChild(movieItem);
+    });
+  } finally {
+    const likeIcon = document.querySelectorAll('.like-image');
+    likeIcon.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        newLike(e.target.parentElement.parentElement.id);
+        const currentLike = e.target.parentElement.children[2];
+        const preLike = +currentLike.innerText;
+        currentLike.innerText = preLike + 1;
+      });
+    });
+    document.querySelectorAll('.singleMovie').forEach((e) => {
+      DisplayLikes(e);
+    });
+  }
+};
 
 window.addEventListener('load', () => {
   displayMovieList();
   DisplayLikes();
 });
-
-

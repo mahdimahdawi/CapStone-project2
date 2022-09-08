@@ -8,6 +8,6 @@ const getLike = async () => Promise.resolve({
 const newLike = async () => Promise.resolve({
   item_id: 73,
   likes: 13,
-})
+});
 
 export { StoreLike, getLike, newLike };

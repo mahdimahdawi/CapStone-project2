@@ -47,7 +47,7 @@ li {
   grid-template-columns: 30% 30%;
   grid-column-gap: 250px;
   grid-row-gap: 10px;
-  margin-left: 100px;  
+  margin-left: 100px;
 }
 
 .singleMovie {
@@ -64,7 +64,6 @@ li {
   display: grid;
   grid-template-columns: 300px auto auto auto;
   grid-column-gap: 150px;
-  padding: 10px;
   background-color: rgb(58, 111, 111);
   width: 599px;
   box-shadow: 1px 1px 10px 1px;
@@ -125,7 +124,7 @@ li {
   border-start-end-radius: 80px;
 }
 
-.like-image:hover{
+.like-image:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
