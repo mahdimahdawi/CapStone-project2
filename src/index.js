@@ -47,8 +47,6 @@ const displayMovieList = async () => {
   };
 };
 
-
-
 const showMovie = (imageUrl, name, id) => {
   const item = document.createElement('li');
   item.classList.add('singleMovie');
@@ -69,11 +67,9 @@ const showMovie = (imageUrl, name, id) => {
   return item;
 };
 
-
-
-
 window.addEventListener('load', () => {
   displayMovieList();
+  DisplayLikes();
 });
 
 
