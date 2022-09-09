@@ -1,7 +1,6 @@
 {
   "name": "capstone-project2",
   "version": "1.0.0",
-  "type": "module",
   "private": true,
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "main": "index.js",
