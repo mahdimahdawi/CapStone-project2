@@ -19,6 +19,11 @@ li {
   padding: 20px;
 }
 
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
 .menu {
   margin-top: 10px;
   font-size: 30px;
