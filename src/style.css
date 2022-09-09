@@ -47,7 +47,7 @@ li {
   grid-template-columns: 30% 30%;
   grid-column-gap: 250px;
   grid-row-gap: 10px;
-  margin-left: 100px;  
+  margin-left: 100px;
 }
 
 .singleMovie {
@@ -62,11 +62,11 @@ li {
 
 .name-like {
   display: grid;
-  grid-template-columns: 300px auto auto;
+  grid-template-columns: 300px auto auto auto;
   grid-column-gap: 150px;
-  padding: 10px;
-  background-color: rgb(3, 42, 42);
-  width: 600px;
+  background-color: rgb(58, 111, 111);
+  width: 599px;
+  box-shadow: 1px 1px 10px 1px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   margin-top: -10px;
@@ -81,11 +81,24 @@ li {
 
 .like-image {
   color: white;
+  width: 20px;
+  height: 20px;
+  margin-left: 30px;
+  margin-top: 5px;
 }
 
 .num-like {
-  margin-left: -120px;
+  margin-left: -140px;
   color: white;
+  margin-top: 5px;
+}
+
+.text-like {
+  position: relative;
+  top: -48px;
+  left: 548px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .btns {
@@ -100,7 +113,7 @@ li {
   width: 280px;
   border-radius: 20px;
   box-shadow: 1px 1px 1px 1px rgb(5, 138, 23);
-  background: rgb(104, 93, 114);
+  background: rgb(58, 111, 111);
   color: white;
   font-size: 20px;
 }
@@ -109,4 +122,9 @@ li {
   background: blueviolet;
   transform: scale(0.99);
   border-start-end-radius: 80px;
+}
+
+.like-image:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
