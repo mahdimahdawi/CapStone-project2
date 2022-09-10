@@ -1,15 +1,20 @@
-import CommentsPopup from '../module/popupComments.js';
+import counter from '../__mock__/commentcounter.js';
 
-test('Count the array of comments and render the number', () => {
-  const comment = new CommentsPopup();
-  const arr = [
-    { comment: 1, creation_date: '2021-01-10', username: 'beky' },
-    { comment: 1, creation_date: '2021-01-09', username: 'james' },
-    { comment: 1, creation_date: '2021-01-10', username: 'nady' },
-    { comment: 1, creation_date: '2021-01-11', username: 'brad' },
-    { comment: 1, creation_date: '2021-01-10', username: 'mafi' },
-  ];
+jest.mock('../src/module/commentcounter.js');
 
-  const length = comment.countComments(arr);
-  expect(length).toBe(5);
+describe('Test counter function', () => {
+  it('Test counter at length 2', async () => {
+    const result = await counter(1);
+    expect(result).toBe(2);
+  });
+
+  it('Test counter not length 3', async () => {
+    const result = await counter(1);
+    expect(result).not.toBe(3);
+  });
+
+  it('Call counter', async () => {
+    const result = await counter(1);
+    expect(result).not.toBe(3);
+  });
 });
