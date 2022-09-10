@@ -74,6 +74,7 @@ window.addEventListener('load', () => {
   DisplayLikes();
 });
 // Add event listener for comments popup button
+// eslint-disable-next-line no-undef
 const commentBtn = document.querySelector(`#btnId-${id}`);
 const commentWrapper = document.querySelector('#commentCont');
 commentBtn.addEventListener('click', () => {

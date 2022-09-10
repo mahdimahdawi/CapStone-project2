@@ -1,10 +1,10 @@
 import getData from './getData.js';
 import {
-  getEpisodes, createComment, getComments,
+  createComment, getComments,
 } from './apiFetch.js';
 
 export default class CommentsPopup {
-  displayCard(episode) {
+  displayCard(data) {
     const card = document.createRange().createContextualFragment(`
     <div class="card">
       <img src="${data.image.medium}" alt="${data.name}" class="card-img">
@@ -66,7 +66,7 @@ export default class CommentsPopup {
         <h3>Add Comment</h3>
         <div><input type="text" class="name-input" placeholder="Your Name" required></div>
         <div><textarea name="insight" id="insignt" class="insignt" cols="30" placeholder="Your Insight" rows="8"></textarea></div>
-        <input type="submit" class="submitBtn" value="Submit" id="${show.id}">
+        <input type="submit" class="submitBtn" value="Submit" id="${getData.id}">
       </form>
     </div>`;
     const commentCont = document.getElementById('commentCont');
@@ -79,7 +79,7 @@ export default class CommentsPopup {
       const username = document.querySelector('.name-input').value;
       const comment = document.querySelector('.insignt').value;
       await this.createComment(itemId, username, comment);
-      const comments = await getComments(show.id);
+      const comments = await getComments(getComments.id);
       const commentsCount = document.querySelector('#comments-count');
       commentsCount.innerHTML = '';
       commentsCount.innerHTML = comments.length;
