@@ -1,4 +1,11 @@
+const SHOW_BASE_URL = 'https://api.tvmaze.com/seasons/5/episodes';
 const INVOLVEMENT_API_BASE_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Imf4csndvBnR19rGhvHc';
+
+export const getEpisodes = async () => {
+  const response = await fetch(`${SHOW_BASE_URL}/shows`, { method: 'GET' });
+  const episodes = await response.json();
+  return episodes;
+};
 
 export const createComment = async (id, name, comment) => {
   const formData = {
