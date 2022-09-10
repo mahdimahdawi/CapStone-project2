@@ -30,6 +30,7 @@ const showPopupDialog = async (id) => {
              <img src="${close}" class='close-btn' alt="image">
         </div>
             <h2 class="title"> ${newMovies.name}</h2>
+            <p class="summary"> ${newMovies.summary}</p>
         <ul class="detail">
             <li>Type: ${newMovies.type}</li>
             <li>Air Date:  ${newMovies.airdate}</li>
