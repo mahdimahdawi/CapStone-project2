@@ -73,5 +73,5 @@ const commentBtn = document.querySelector(`#btnId-${id}`);
 const commentWrapper = document.querySelector('#commentCont');
 commentBtn.addEventListener('click', () => {
   commentWrapper.innerHTML = '';
-  CommentsPopup.renderPopUp(data);
+  CommentsPopup.renderPopUp();
 });
