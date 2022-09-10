@@ -8,9 +8,18 @@ body,
   box-sizing: border-box;
 }
 
+body {
+  color: rgb(142, 196, 243);
+}
+
 .header {
   display: flex;
-  margin: 20px;
+  margin: 20px 20px 20px 118px;
+  justify-content: space-between;
+  background-color: rgb(36, 91, 91);
+  width: 100%;
+  margin-left: -1px;
+  margin-top: 0;
 }
 
 li {
@@ -19,22 +28,38 @@ li {
   padding: 20px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .menu {
   margin-top: 10px;
   font-size: 30px;
+  margin-right: 108px;
+}
+
+.menu-link {
+  color: black;
+}
+
+.movie-num {
+  color: black;
 }
 
 .logo {
-  font-family: sans-serif;
+  width: 140px;
+  height: 50px;
+  margin-left: 120px;
+  margin-top: 2px;
 }
 
 .footer {
   position: fixed;
-  top: 90%;
-  width: 99%;
-  height: 50px;
+  top: 93%;
+  width: 100%;
+  height: 60px;
   border: 2px solid;
-  margin-left: 8px;
+  background-color: rgb(36, 91, 91);
 }
 
 .footer-text {
