@@ -34,7 +34,7 @@ const showMovie = (imageUrl, name, id) => {
   </div>
   <p class="text-like">Like</P>
   <div class="btns">
-  <button id="btnId-${id}" class="comment-btn btn">Comments</button>
+  <button class="comment-btn" data-id="${id}" >Comments</button>
   <button id="${id}" class="reservation-btn btn">Reservation</button>
   </div>
   `;
@@ -66,7 +66,7 @@ const displayMovieList = async () => {
     });
 
     // implement the comment feature
-    document.querySelector('.show-items').addEventListener('click', (e) => {
+    document.querySelector('.movie-list').addEventListener('click', (e) => {
       if (e.target.classList.contains('comment-btn')) {
         const id = e.target.dataset;
         showPopupDialog(id.id);
@@ -114,7 +114,7 @@ popup.addEventListener('click', (e) => {
 popup.addEventListener('click', (e) => {
   e.preventDefault();
   if (e.target.classList.contains('close-btn')) {
-    document.querySelector('main').style.display = 'flex';
+    document.querySelector('.content').style.display = 'flex';
     document.querySelector('.popup-dialog').style.display = 'none';
   }
 });

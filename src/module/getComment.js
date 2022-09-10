@@ -1,4 +1,4 @@
-const commenuURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/ggZLPPwjynSGZI0V2o7g/comments';
+const commenuURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/EYuha4IJbZNmX75tOKPh/comments';
 const getComment = async (id) => {
   try {
     const result = await fetch(`${commenuURL}?item_id=${id}`, {

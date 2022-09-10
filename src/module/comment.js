@@ -5,7 +5,7 @@ import counter from './commentcounter.js';
 import createFormContainer from './commentform.js';
 import getData from './getData.js';
 
-const main = document.querySelector('main');
+const main = document.querySelector('.content');
 const popup = document.querySelector('.popup-dialog');
 const formContainer = document.createElement('form');
 const commentContainer = document.createElement('div');
@@ -16,9 +16,10 @@ formContainer.className = 'form';
 const showPopupDialog = async (id) => {
   const commentCounter = document.createElement('h2');
   const result = await getData();
+  // eslint-disable-next-line no-unused-vars
   const index = +id - 1;
 
-  const newMovies = result[index];
+  const newMovies = result[5];
   const comments = await getComment(newMovies.id);
   const totalComment = await counter(newMovies.id);
   main.style.display = 'none';
