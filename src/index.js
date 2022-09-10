@@ -1,12 +1,14 @@
-import heartIcon from './images/heart-icon.svg';
 import './style.css';
 import getData from './module/getData.js';
 import { newLike, getLike } from './module/likeApi.js';
 import CommentsPopup from './module/popupComments.js';
-
+import heartIcon from './images/heart-icon.svg';
+import logo from './images/logo.png';
 const availableMovies = document.querySelector('.movie-num');
 const movieList = document.querySelector('.movie-list');
+const logoIcon = document.querySelector('.logo');
 
+logoIcon.src = logo;
 const DisplayLikes = async (item) => {
   const likesNumber = await getLike();
   likesNumber.forEach((e) => {
