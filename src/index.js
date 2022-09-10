@@ -4,6 +4,9 @@ import { newLike, getLike } from './module/likeApi.js';
 import CommentsPopup from './module/popupComments.js';
 import heartIcon from './images/heart-icon.svg';
 import logo from './images/logo.png';
+import heartIcon from './images/heart-icon.svg';
+import logo from './images/logo.png';
+
 const availableMovies = document.querySelector('.movie-num');
 const movieList = document.querySelector('.movie-list');
 const logoIcon = document.querySelector('.logo');
