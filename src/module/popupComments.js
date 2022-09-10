@@ -1,87 +1,34 @@
+import getData from './getData.js';
 import {
-  createComment, getComments,
-} from './apiOperations.js';
+  getEpisodes, createComment, getComments,
+} from './apiFetch.js';
 
-export default class comments {
-  displayCard(show, like) {
-    let likeCount = 0;
-    if (like.length > 0) {
-      likeCount = like[0].likes;
-    }
-
-    // const card = document.createRange().createContextualFragment(`
-    // <div class="card">
-    //   <img src="${show.image.medium}" alt="${show.name}" class="card-img">
-    //   <div class="card-details">
-    //   <h3>${show.name.toUpperCase()}</h3>
-    //   <div class="like-section">
-    //   <span data-id="${show.id}" id="like_btn_${show.id}">
-    //   <i class="fa-regular fa-heart fa-2x"></i>
-    //   </span>
-    //   <p id="likeCount_displayed_${show.id}">${likeCount} ${likeCount > 1 ? 'Likes' : 'Like'}</p>
-    //   </div>
-    //   </div>
-    //   <div class="card-btns">
-    //   <button data-id="${show.id}" id= "btnId-${show.id}" class="comment-btn" type="button">Comments</button>
-    //   </div>
-    //   </div>`);
-    // const cardContainer = document.querySelector('.main-container');
-    // cardContainer.append(card);
-
-    // const likeBtnEvent = document.querySelector(`#like_btn_${show.id}`);
-    // const likeCountDisplayed = document.querySelector(`#likeCount_displayed_${show.id}`);
-    // likeBtnEvent.addEventListener('click', async () => {
-    //   const id = likeBtnEvent.getAttribute('data-id');
-    //   const child = likeBtnEvent.childNodes;
-    //   child[1].classList.add('liked');
-    //   await this.likeShow(id);
-    //   const currentLike = parseInt(likeCountDisplayed.innerHTML.split(' ')[0], 10);
-    //   const newLike = currentLike + 1;
-    //   if (newLike > 1) {
-    //     likeCountDisplayed.innerHTML = `${newLike} Likes`;
-    //   } else {
-    //     likeCountDisplayed.innerHTML = `${newLike} Like`;
-    //   }
-    //   child[1].classList.remove('liked');
-    // });
-
-    const commentBtn = document.querySelector(`#btnId-${show.id}`);
+export default class CommentsPopup {
+  displayCard(episode) {
+    const card = document.createRange().createContextualFragment(`
+    <div class="card">
+      <img src="${data.image.medium}" alt="${data.name}" class="card-img">
+      <div class="card-details">
+      <h3>${data.name.toUpperCase()}</h3>
+      </div>
+      <div class="card-btns">
+      <button data-id="${data.id}" id= "btnId-${data.id}" class="comment-btn" type="button">Comments</button>
+      </div>
+      </div>`);
+    const cardContainer = document.querySelector('.main-container');
+    cardContainer.append(card);
+    const commentBtn = document.querySelector(`#btnId-${data.id}`);
     const commentWrapper = document.querySelector('#commentCont');
     commentBtn.addEventListener('click', () => {
       commentWrapper.innerHTML = '';
-      this.renderPopUp(show);
+      this.renderPopUp(data);
     });
   }
-
-  // async getShows() {
-  //   const shows = await getShows();
-  //   const likes = await getLikes();
-  //   const showCount = document.querySelector('#show_count');
-  //   showCount.innerHTML = this.countShows(shows);
-  //   shows.forEach((show) => {
-  //     const like = likes.filter((like) => {
-  //       if (parseInt(like.item_id, 10) === parseInt(show.id, 10)) {
-  //         return like;
-  //       }
-  //       return false;
-  //     });
-  //     this.displayCard(show, like);
-  //   });
-  // }
-
-  // countShows(shows) {
-  //   this.length = shows.length;
-  //   return this.length;
-  // }
 
   countComments(comments) {
     this.length = comments.length;
     return this.length;
   }
-
-  // async likeShow(showId) {
-  //   this.res = await likeShowOps(showId);
-  // }
 
   async commentShow(id) {
     this.res = await getComments(id);
@@ -93,17 +40,17 @@ export default class comments {
     this.res = await createComment(id, name, comment);
   }
 
-  async renderPopUp(show) {
-    const comments = await getComments(show.id);
+  async renderPopUp(episode) {
+    const comments = await getComments(episode.id);
     let html = `
     <div class="comment-section-container">
       <i class="fa fa-times" aria-hidden="true"></i>
       <div class="image-container" id="">
-        <img  src="${show.image.medium}">
+        <img  src="${getData.imageUrl}">
       </div>
       <div class="info-container">
-        <h3 class="showName">${show.name.toUpperCase()}</h3>
-        <p class="desc">${show.summary}</p>
+        <h3 class="showName">${getData.name}</h3>
+        <p class="desc">${getData.summary}</p>
       </div>
       <div class="display-comment">
         <h3>Comments (<span id= "comments-count">${comments.length ? comments.length : 0}</span>)</h3>
