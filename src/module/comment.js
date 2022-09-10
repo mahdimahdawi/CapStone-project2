@@ -1,9 +1,9 @@
 // https://api.tvmaze.com/seasons/1/episodes
-import close from '../../images/close.png';
+import close from '../images/close.png';
 import getComment from './getComment.js';
 import counter from './commentcounter.js';
 import createFormContainer from './commentform.js';
-import getData from '../modules/data.js';
+import getData from './getData.js';
 
 const main = document.querySelector('main');
 const popup = document.querySelector('.popup-dialog');
