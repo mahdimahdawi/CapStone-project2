@@ -41,11 +41,17 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Mahdi Mahdawi**
 
 - GitHub: [@mahdimahdawi](https://github.com/mahdimahdawi/CapStone-project2)
 - Twitter: [@Mahdimahdawo](https://mobile.twitter.com/mahdimahdawi16)
 - LinkedIn: [Mahdi Mahdawi](https://www.linkedin.com/in/mahdi-mahdawi-434296189)
+
+👤 **Temesgen Ayneka**
+
+- GitHub: [@TemesgenA](https://github.com/TemesgenA)
+- Twitter: [@Temesgen_Ayneka](https://twitter.com/Temesgen_Ayneka)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/temesgen-ayneka/)
 
 
 ## 🤝 Contributing
