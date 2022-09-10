@@ -1,20 +1,17 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Project Name
+- TV Movies
 
 > Description the project.
+- this project designed to fetch the data item form the target API and dispaly to UI for Users.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JAVASCRIPT, CSS, HTML
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
+## Live Demo (https://drive.google.com/file/d/13roOwlGtt_0aGKxNoH6dar6MvWnnFN3j/view?usp=sharing)
 
 ## Getting Started
 
@@ -25,38 +22,40 @@
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- To use this project locally on you local environment you need a pc or any device that able to clone the source code from the Reop.
 
 ### Setup
+- Copy the link of the repo and clone to you local environment.
 
 ### Install
+- To Install simplly Run `npm start` it automaticlly direct you to you browser tab.
 
 ### Usage
+- Users can see list of movie with image name the number of like also can add new like to favoriat movies.
 
 ### Run tests
-
-### Deployment
-
-
+- `npm start`.
 
 ## Authors
 
-👤 **Author1**
+👤 **Mahdi Mahdawi**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@mahdimahdawi](https://github.com/mahdimahdawi/CapStone-project2)
+- Twitter: [@Mahdimahdawo](https://mobile.twitter.com/mahdimahdawi16)
+- LinkedIn: [Mahdi Mahdawi](https://www.linkedin.com/in/mahdi-mahdawi-434296189)
 
-👤 **Author2**
+👤 **Temesgen Ayneka**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@TemesgenA](https://github.com/TemesgenA)
+- Twitter: [@Temesgen_Ayneka](https://twitter.com/Temesgen_Ayneka)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/temesgen-ayneka/)
+
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/mahdimahdawi/CapStone-project2/issues).
 
 ## Show your support
 
@@ -70,6 +69,6 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://github.com/mahdimahdawi/CapStone-project2/blob/dev/MIT.md) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
