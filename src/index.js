@@ -2,6 +2,7 @@ import heartIcon from './images/heart-icon.svg';
 import './style.css';
 import getData from './module/getData.js';
 import { newLike, getLike } from './module/likeApi.js';
+import CommentsPopup from './module/popupComments.js';
 
 const availableMovies = document.querySelector('.movie-num');
 const movieList = document.querySelector('.movie-list');
@@ -27,7 +28,7 @@ const showMovie = (imageUrl, name, id) => {
   </div>
   <p class="text-like">Like</P>
   <div class="btns">
-  <button id="${id}" class="comment-btn btn">Comments</button>
+  <button id="btnId-${id}" class="comment-btn btn">Comments</button>
   <button id="${id}" class="reservation-btn btn">Reservation</button>
   </div>
   `;
@@ -66,4 +67,11 @@ const displayMovieList = async () => {
 window.addEventListener('load', () => {
   displayMovieList();
   DisplayLikes();
+});
+// Add event listener for comments popup button
+const commentBtn = document.querySelector(`#btnId-${id}`);
+const commentWrapper = document.querySelector('#commentCont');
+commentBtn.addEventListener('click', () => {
+  commentWrapper.innerHTML = '';
+  CommentsPopup.renderPopUp(data);
 });
